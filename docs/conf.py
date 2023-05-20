@@ -3,7 +3,6 @@
 #:==========================================
 
 from datetime import datetime
-from importlib.metadata import version as get_version
 
 
 #####################
