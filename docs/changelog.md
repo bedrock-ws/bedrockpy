@@ -14,3 +14,4 @@ and this project adheres to
 - ✨ Initial release
 - 🔨 Prerelease
 
+[1.0.0a0]: https://github.com/bedrock-ws/bedrockpy/releases/v1.0.0a0
