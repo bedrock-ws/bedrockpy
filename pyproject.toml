@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bedrockpy"
-version = "1.0.0.a0"
+version = "1.0.0.a0.post1"
 description = "Minecraft: Bedrock Edition Websocket Server"
 authors = ["Jonas da Silva"]
 maintainers = [
@@ -25,6 +25,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 packages = [{include = "bedrock", from = "src"}]
+include = ["src/bedrock/py.typed"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
