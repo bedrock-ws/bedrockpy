@@ -1,0 +1,34 @@
+# Projects using *bedrockpy*
+
+```{tip}
+If you have a project using *bedrockpy* that you want to share with
+the community? Feel free to apply.
+{{wip}}
+```
+
+## BlockDS
+
+> A 3DS-like system inside Bedrock with a custom OS
+
+{{wip}}
+
+## bepix
+
+> Import images into Minecraft as Pixel Arts
+
+{{wip}}
+
+
+## nautilus
+
+> A [Shell](https://en.wikipedia.org/wiki/Shell_(computing)) inside
+> Minecraft
+
+{{wip}}
+
+
+## bedrockpyrepl
+
+> Python REPL inside Minecraft
+
+{{wip}}

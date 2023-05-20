@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "bedrockpy"
+version = "1.0.0.a0"
+description = "Minecraft: Bedrock Edition Websocket Server"
+authors = ["Jonas da Silva"]
+maintainers = [
+    "Bedrock WS <bedrock-ws@proton.me>",
+    "Jonas da Silva"
+]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/bedrock-ws/bedrockpy/"
+documentation = "https://bedrockpy.readthedocs.io/"
+keywords = ["bedrock", "minecraft", "websocket"]
+classifiers = [
+    "Intended Audience :: Education",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Education",
+    "Topic :: Games/Entertainment",
+    "Typing :: Typed",
+]
+packages = [{include = "bedrock", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+websockets = "^11.0.2"
+attrs = "^23.1.0"
+convert-case = "^1.1.1"
+
+sphinx = {version = "^6.2.1", optional = true}
+myst-parser = {version = "^1.0.0", extras = ["linkify"], optional = true}
+sphinx-copybutton = {version = "^0.5.2", optional = true}
+furo = {version = "^2023.3.27", optional = true}
+sphinxcontrib-mermaid = {version = "^0.8.1", optional = true}
+sphinxcontrib-video = {version = "^0.1.1", optional = true}
+
+mypy = {version = "^1.2.0", optional = true}
+tox = {version = "^4.5.1", optional = true}
+
+uvloop = {version = "^0.17.0", optional = true}
+
+[tool.poetry.extras]
+docs = [
+    "sphinx",
+    "myst-parser",
+    "sphinx-copybutton",
+    "furo",
+    "sphinxcontrib-mermaid",
+    "sphinxcontrib-video",
+]
+dev = [
+    "mypy",
+    "tox",
+]
+fast = [
+    "uvloop",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

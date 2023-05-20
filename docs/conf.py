@@ -1,0 +1,91 @@
+#:==========================================
+# Sphinx Documentation Builder Configuration
+#:==========================================
+
+from datetime import datetime
+from importlib.metadata import version as get_version
+
+
+#####################
+# Project Information
+
+project = 'bedrockpy'
+copyright = f'{datetime.now().year}, Jonas da Silva'
+author = 'Jonas da Silva'
+release = '1.0.0a0'
+
+
+###############
+# Configuration
+
+extensions = [
+    'sphinx.ext.autodoc',
+    'sphinx.ext.intersphinx',
+    'sphinx.ext.napoleon',
+    'sphinx.ext.todo',
+
+    'myst_parser',
+    'sphinx_copybutton',
+    'sphinxcontrib.mermaid',
+    'sphinxcontrib.video'
+]
+
+
+#######################
+# autodoc Configuration
+
+autodoc_default_options = dict.fromkeys('''
+    members
+    inherited-members
+    undoc-members
+    '''.split(),
+    True
+)
+autodoc_typehints = 'both'
+autoclass_content = 'both'
+
+
+####################
+# todo Configuration
+
+todo_include_todos = True
+
+
+####################
+# MyST Configuration
+
+myst_enable_extensions = [
+    'linkify',
+    'smartquotes',
+    'substitution'
+]
+
+myst_linkify_fuzzy_links = False
+myst_substitutions = {
+    'wip': '```{todo}\n\N{BUILDING CONSTRUCTION} Work In Progress\n```',
+    'needs_research': '```{admonition} Research Required\n:class: warning\n\nThe section below requires research to be confirmed.\n```'
+}
+myst_fence_as_directive = ['mermaid']
+
+
+###########################
+# Intersphinx Configuration
+
+intersphinx_mapping = {
+    'python': ('https://docs.python.org/3', None),
+}
+
+
+############
+# Find Files
+
+templates_path = ['_templates']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+
+###########################
+# HTML Output Configuration
+
+html_theme = 'furo'
+html_static_path = ['_static']
+html_css_files = ['style.css']
