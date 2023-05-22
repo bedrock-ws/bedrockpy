@@ -11,7 +11,7 @@
 with a player in a Minecraft game. As the name suggests: this project
 only works with the "Minecraft: Bedrock Edition".
 
-[![Documentation Status](https://readthedocs.org/projects/bedrockpy/badge/?version=latest)](https://bedrockpy.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/bedrockpy/badge/?version=latest&style=flat-square)](https://bedrockpy.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/github/license/bedrock-ws/bedrockpy?style=flat-square)](https://github.com/bedrock-ws/bedrockpy/blob/main/LICENSE)
 [![PyPI](https://img.shields.io/pypi/v/bedrockpy?style=flat-square)](https://pypi.org/project/bedrockpy)
 [![PyPI - Downloads](https://img.shields.io/pypi/dw/bedrockpy?style=flat-square)](https://pypi.org/project/bedrockpy)
