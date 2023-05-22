@@ -11,7 +11,7 @@ from datetime import datetime
 project = 'bedrockpy'
 copyright = f'{datetime.now().year}, Jonas da Silva'
 author = 'Jonas da Silva'
-release = '1.0.0a0'
+release = '1.0.0a0.post1'
 
 
 ###############
