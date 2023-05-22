@@ -31,4 +31,4 @@ the community? Feel free to apply.
 
 > Python REPL inside Minecraft
 
-{{wip}}
+https://github.com/bedrock-ws/bedrockpyrepl
