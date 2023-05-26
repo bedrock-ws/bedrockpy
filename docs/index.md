@@ -43,6 +43,7 @@ titlesonly: true
 projects-using-bedrockpy
 use-on-android
 credits
+changelog
 ```
 
 ```{toctree}
@@ -50,6 +51,5 @@ credits
 caption: Development
 titlesonly: true
 ---
-development/index.md
-changelog
+contributing/index.md
 ```
