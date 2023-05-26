@@ -1,5 +1,9 @@
-"""
-Demo script for quickly test if everything is set up correctly.
+"""Demo script to quickly test if everything is set up correctly.
+
+This demo exists so one does not have to write a script just to find out that
+the device is not supported or a similar issue. It prints text to the console
+as soon as the server is ready to be used and displays a message in the game's
+chat when a connection has been successfully established.
 """
 
 import socket
@@ -9,7 +13,7 @@ from .server import Server
 from .utils import rawtext
 
 def get_ip() -> str:
-    """Returns the IP address."""
+    """Returns the private IP address."""
     return socket.gethostbyname(socket.gethostname())
 
 app = Server()
