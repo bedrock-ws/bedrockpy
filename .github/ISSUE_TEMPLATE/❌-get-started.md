@@ -2,7 +2,7 @@
 name: "❌ Get started"
 about: Ask for help in order to get started
 title: "[❌ Help]: "
-labels: help wanted
+labels: documentation, help wanted
 assignees: ''
 
 ---
