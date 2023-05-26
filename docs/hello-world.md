@@ -29,7 +29,7 @@ the `/connect` command should use that private IP address as well instead
 of "localhost"/`127.0.0.1`. For example:
 
 ```text
-/connect 192.168.69.420
+/connect 192.168.69.420:6464
 ```
 
 ````
