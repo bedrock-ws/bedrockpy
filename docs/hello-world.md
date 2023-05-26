@@ -1,4 +1,4 @@
-# Hello World with *bedrockpy*
+# *Hello World* with *bedrockpy*
 
 Now, we are finally ready to write some code! Let's start with a simple
 example.
@@ -12,19 +12,26 @@ app.start("localhost", 6464)
 ```
 
 ````{tip}
-If the server running the server is not the same running the game, the IP
-address of your device is required instead of "localhost". The device
-connecting to the server needs to be in the same network as the server.
+If the device running the server should not be the same running the
+game, the private IP address of your device is required instead of
+"localhost"/`127.0.0.1`. The device connecting to the server needs
+to be in the same network as the device running the server.
 
-The IP adress should start with "192" and can be retrieved easily by
-using this command:
+The private IP adress usually starts with "192" and can be retrieved
+easily by using this command in the terminal:
 
 ```console
 python -c "from bedrock._demo import get_ip; print(get_ip())"
 ```
 
-If you choose to go with the IP instead of "localhost" the `/connect`
-command must include the IP as well instead of "localhost".
+If you choose to use the private IP instead of "localhost"/`127.0.0.1`,
+the `/connect` command should use that private IP address as well instead
+of "localhost"/`127.0.0.1`. For example:
+
+```text
+/connect 192.168.69.420
+```
+
 ````
 
 First, we import the {py:class}`bedrock.server.Server` class from the
