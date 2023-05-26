@@ -42,6 +42,7 @@ titlesonly: true
 ---
 projects-using-bedrockpy
 use-on-android
+credits
 ```
 
 ```{toctree}
