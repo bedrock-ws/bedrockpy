@@ -43,7 +43,7 @@ module {py:mod}`bedrock.server` in the {py:mod}`bedrock`
 ## Establish Connection
 
 As metioned earlier, a connection to the server can be established by
-typing `/connect localhost:6464`
+typing `/connect localhost:6464`.
 
 ## Close Connection
 
