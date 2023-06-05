@@ -1,6 +1,6 @@
 # Credits
 
-Thanks to these people which helped the development of *bedrockpy*:
+Thanks to these people who helped in the development of *bedrockpy*:
 
 -------------------------------------------------------------------
 
