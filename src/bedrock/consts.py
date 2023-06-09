@@ -115,4 +115,7 @@ GAME_EVENTS = [
     "world_loaded",
     "world_unloaded",
 ]
-"""A list of game events you can subcribe to."""
+"""A list of game events the server can subcribe to.
+
+.. note:: Some of these events may not work or are useless in a way.
+"""
