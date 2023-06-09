@@ -1,8 +1,31 @@
 MAX_COMMAND_PROCESSING = 100
-"""The amount of commands the client can process at a time without responding."""
+"""The amount of commands the client can process at a time without responding.
+
+.. mermaid::
+    caption: An example of an interaction between the server and the client.
+    
+    %%{init: {'theme': 'neutral'}}%%
+    sequenceDiagram
+        Server-)Client: Command Request
+        Server-)Client: Command Request
+        Server-)Client: Command Request
+        Client-)Server: Command Response
+        Server-)Client: Command Request
+        Server-)Client: … 997 more …
+        Server-xClient: Command Request
+        Client-)Server: Command Response
+        Client-)Server: Command Response
+        Client-)Server: Command Response
+        Client-)Server: … 997 more …
+
+"""
 
 NAME = "External"
-"""The name of the server displayed in the game."""
+"""The name of the server displayed in the game.
+
+This name is displayed left to the message when the ``say`` command is used. Therefore
+it is usually preferred to use ``tellraw`` instead.
+"""
 
 MINECRAFT_VERSION = "1.19.70"
 """The Minecraft version to use for the command syntax. This usually has no big impact."""
