@@ -3,7 +3,7 @@
 ## `bedrock.ext.ui`
 
 ```{todo}
-seperate styles and icons and add url references respectively.
+separate styles and icons and add url references respectively.
 ```
 
 ```{eval-rst}
