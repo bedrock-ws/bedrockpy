@@ -11,12 +11,12 @@ MAX_COMMAND_PROCESSING = 100
         Server-)Client: Command Request
         Client-)Server: Command Response
         Server-)Client: Command Request
-        Server-)Client: … 997 more …
+        Server-)Client: … 97 more …
         Server-xClient: Command Request
         Client-)Server: Command Response
         Client-)Server: Command Response
         Client-)Server: Command Response
-        Client-)Server: … 997 more …
+        Client-)Server: … 97 more …
 
 """
 
