@@ -7,11 +7,13 @@ Throughout the source code the term "command" usually refers to data sent
 to the client and not a Minecraft command. These terms are used interchangeably.
 ```
 
-## In what way can I contribute?
-
-* mention a spelling mistake
-* provide translation
-* doing research
+```{toctree}
+---
+titlesonly: true
+---
+writing
+translating
+```
 
 
 ## Installation
