@@ -47,9 +47,18 @@ typing `/connect localhost:6464`.
 
 ## Close Connection
 
-From the server side it is poosible to close the server and therefore
-closing the connection by simply using {kbd}`CTRL+C` in the terminal.
+### Server Side
+
+It is possible to close the server which closes the connection by stopping
+the program from running by using {kbd}`CTRL+C` in the terminal. This can
+also be achieved by raising an exception like `SystemExit`.
+
+
+### Client Side
 
 The player who established the connection may type `/connect x` in the
 chat where `x` may be any text. Alternatively, the connection is also
 closed when the player closes the game.
+
+Alternative, the {func}`bedrock.server.close` method can be called when
+for instance a special event is triggered.
