@@ -6,6 +6,9 @@ the community? Feel free to apply.
 {{wip}}
 ```
 
+<!-- Method 1 for above: email, Method 2: issue on GH -->
+
+
 ## BlockDS
 
 > A 3DS-like system inside Bedrock with a custom OS
