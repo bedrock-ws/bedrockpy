@@ -64,7 +64,7 @@ inside a Minecraft World), you need to use the `/connect` or
 or dektop devices. Type that command in the game to find
 out if your device is supported.
 
-This does not mean, that you cannot establish a connection in
+This does not mean, that you cannot establish a connection in a
 world made on other platforms. By joining for example a world by
 someone on Playstation with your Android phone, it is possible
 as long as the Android player has the operator status, to establish
