@@ -24,6 +24,7 @@ extensions = [
     'sphinx.ext.todo',
 
     'myst_parser',
+    'notfound.extension',
     'sphinx_copybutton',
     'sphinxcontrib.mermaid',
     'sphinxcontrib.video'
