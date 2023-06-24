@@ -26,6 +26,7 @@ extensions = [
     'myst_parser',
     'notfound.extension',
     'sphinx_copybutton',
+    'sphinx_design',
     'sphinxcontrib.mermaid',
     'sphinxcontrib.video'
 ]
