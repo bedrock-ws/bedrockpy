@@ -1,4 +1,8 @@
 <p align="center">
+  <img
+    src="https://github.com/bedrock-ws/bedrockpy/blob/main/bedrockpy_3d.png?raw=true"
+    width="140vh"
+  >
   <h1 align="center">bedrockpy</h1>
   <p align="center">
     Minecraft: Bedrock Edition Websocket Server
