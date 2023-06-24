@@ -1,14 +1,20 @@
 # Contributing
 
-{{wip}}
+## In what ways can I contribute?
 
-```{toctree}
----
-titlesonly: true
----
-writing
-translating
-```
+<!-- Maybe move this part into a CODE_OF_CONDUCT.md file and `include` it in the future -->
+
+We welcome any kind of contributions - let it be just a reference to a typo.
+
+- Issue in documentation (e.g. grammar or typos)
+- Writing blogs which are included in the documentation
+- Translating
+- Fixing bugs
+- Feature request
+
+To avoid repeating ourselves and make your way faster and transparent we aks you to
+read this section carefully. But don't worry, if you don't understand something or
+want to make sure you don't make something wrong, then you can ask us.
 
 
 ## Notes
@@ -20,7 +26,8 @@ to the client and not a Minecraft command. These terms are used interchangeably.
 ## Installation
 
 There are some extra dependencies that need to be installed for
-development.
+development. This only affects you if you consider working on the
+codebase (including documentation).
 
 First, [install Poetry](https://python-poetry.org/docs/#installation).
 
@@ -37,7 +44,8 @@ poetry install --all-extras
 
 ## View Documentation
 
-```console
+```bash
+# from the root directory
 cd docs
 poetry run make html
 poetry run python -m http.server -d _build/html
@@ -50,3 +58,12 @@ tox run
 ```
 
 
+## Table of Contents
+
+```{toctree}
+---
+titlesonly: true
+---
+writing
+translating
+```
