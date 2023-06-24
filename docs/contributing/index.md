@@ -2,11 +2,6 @@
 
 {{wip}}
 
-```{attention}
-Throughout the source code the term "command" usually refers to data sent
-to the client and not a Minecraft command. These terms are used interchangeably.
-```
-
 ```{toctree}
 ---
 titlesonly: true
@@ -14,6 +9,12 @@ titlesonly: true
 writing
 translating
 ```
+
+
+## Notes
+
+Throughout the source code the term "command" usually refers to data sent
+to the client and not a Minecraft command. These terms are used interchangeably.
 
 
 ## Installation
@@ -30,18 +31,19 @@ git clone https://github.com/bedrock-ws/bedrockpy.git && cd $_
 ```
 
 ```console
-poetry install --with docs
+poetry install --all-extras
 ```
 
 
-## Run Examples
+## View Documentation
 
 ```console
-poetry run python examples/eggs.py
+cd docs
+poetry run make html
+poetry run python -m http.server -d _build/html
 ```
 
-
-## Run checks and tests
+## Run Tests
 
 ```console
 tox run
