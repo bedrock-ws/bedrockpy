@@ -787,6 +787,25 @@ code-style = ["pre-commit (==2.12.1)"]
 rtd = ["ipython", "myst-nb", "sphinx", "sphinx-book-theme", "sphinx-examples"]
 
 [[package]]
+name = "sphinx-notfound-page"
+version = "0.8.3"
+description = "Sphinx extension to build a 404 page with absolute URLs"
+category = "main"
+optional = true
+python-versions = "*"
+files = [
+    {file = "sphinx-notfound-page-0.8.3.tar.gz", hash = "sha256:f728403280026b84c234540bebbed7f710b9ea582e7348a35a5becefe4024332"},
+    {file = "sphinx_notfound_page-0.8.3-py2.py3-none-any.whl", hash = "sha256:c4867b345afccef72de71fb410c412540dfbb5c2de0dc06bde70b331b8f30469"},
+]
+
+[package.dependencies]
+sphinx = ">=1.8"
+
+[package.extras]
+doc = ["sphinx", "sphinx-autoapi", "sphinx-notfound-page", "sphinx-prompt", "sphinx-rtd-theme", "sphinx-tabs", "sphinxemoji"]
+test = ["tox"]
+
+[[package]]
 name = "sphinxcontrib-applehelp"
 version = "1.0.4"
 description = "sphinxcontrib-applehelp is a Sphinx extension which outputs Apple help books"
@@ -1146,10 +1165,10 @@ files = [
 
 [extras]
 dev = ["mypy", "tox"]
-docs = ["furo", "myst-parser", "sphinx", "sphinx-copybutton", "sphinxcontrib-mermaid", "sphinxcontrib-video"]
+docs = ["furo", "myst-parser", "sphinx", "sphinx-copybutton", "sphinx-notfound-page", "sphinxcontrib-mermaid", "sphinxcontrib-video"]
 fast = ["uvloop"]
 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "170ea00535885a2d1bd3eebae6b283c340bc7ca4f88c53c7d858db5bc0719240"
+content-hash = "7f9e9908131ec67c61a0c710fe67581e74974deb4d58c03e3537aead069b08dd"
