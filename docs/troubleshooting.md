@@ -4,7 +4,7 @@ Some errors might occur while trying to start the server or connect
 to it. This section covers how to fix common issues.
 
 Is there an error you do not know how to fix? Consider
-[opening an issue on GitHub}(https://github.com/bedrock-ws/bedrockpy/issues/new/choose)!
+[opening an issue on GitHub](https://github.com/bedrock-ws/bedrockpy/issues/new/choose)!
 We and others are glad to help you.
 
 
