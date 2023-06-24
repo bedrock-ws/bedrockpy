@@ -62,6 +62,7 @@ myst_enable_extensions = [
 
 myst_linkify_fuzzy_links = False
 myst_substitutions = {
+    'version': release,
     'wip': '```{todo}\n\N{BUILDING CONSTRUCTION} Work In Progress\n```',
     'needs_research': '```{admonition} Research Required\n:class: warning\n\nThe section below requires research to be confirmed.\n```'
 }
