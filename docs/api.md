@@ -1,5 +1,10 @@
 # API Reference
 
+```{note}
+The API documented here is for version {{release}}. You can select a different
+version at the bottom of the sidebar.
+```
+
 ## `bedrock.consts`
 
 ```{eval-rst}
