@@ -2,7 +2,7 @@
 hide-toc: true
 ---
 
-# bedrockpy *v{{release}}*
+# bedrockpy
 
 ```{include} ../README.md
 ---
