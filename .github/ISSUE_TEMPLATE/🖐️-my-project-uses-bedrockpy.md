@@ -1,8 +1,8 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
-title: ''
-labels: ''
+name: 🖐️ My projct uses bedrockpy
+about: If you would like to be mentioned on the website.
+title: "[🖐️ Ad]: "
+labels: documentation
 assignees: ''
 
 ---
