@@ -6,11 +6,14 @@
 
 We welcome any kind of contributions - let it be just a reference to a typo.
 
-- Issue in documentation (e.g. grammar or typos)
+Here are a few examples of ways you can contribute:
+
+
+- Mention issue in documentation (e.g. grammar, typos, UI)
 - Writing blogs which are included in the documentation
 - Translating
 - Fixing bugs
-- Feature request
+- Sharing feature request
 
 To avoid repeating ourselves and make your way faster and transparent we aks you to
 read this section carefully. But don't worry, if you don't understand something or
