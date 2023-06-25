@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+from collections.abc import Iterable, Mapping
 from enum import Enum
 import json
-from typing import Iterable, Literal, Mapping, NewType
+from typing import Literal, NewType
 
 from attrs import define
 
