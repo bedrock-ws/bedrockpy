@@ -23,9 +23,9 @@ only works with the "Minecraft: Bedrock Edition".
 
 ## Quick Links
 
-* 📦 [PyPI](https://pypi.org/project/bedrockpy)
-* 📖 [Docs](https://bedrockpy.readthedocs.io/)
-* 🐍 [Repo](https://github.com/bedrock-ws/bedrockpy/)
+- 📦 [PyPI](https://pypi.org/project/bedrockpy)
+- 📖 [Docs](https://bedrockpy.readthedocs.io/)
+- 🐍 [Repo](https://github.com/bedrock-ws/bedrockpy/)
 
 
 ## "Show me some Code"
@@ -50,6 +50,15 @@ app.start("localhost", 6464)
 
 *Please refer to the "Introduction" section in the documentation in
 order to get started with bedrockpy.*
+
+
+## Requirements
+
+- [Python](https://www.python.org) 3.10 or greater
+- [pip](https://pip.pypa.io/en/stable/) (usually comes with Python)
+- [Minecraft](https://www.minecraft.net/en-us) (**not** Java Edition) (any version)[^1]
+
+[^1]: This only applies to the client connecting to the server.
 
 <!-- end brief-hook -->
 
