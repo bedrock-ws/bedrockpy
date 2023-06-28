@@ -1,4 +1,32 @@
 """
+.. role:: mc-black
+.. role:: mc-dark-blue
+.. role:: mc-dark-green
+.. role:: mc-dark-aqua
+.. role:: mc-dark-red
+.. role:: mc-dark-purple
+.. role:: mc-gold
+.. role:: mc-gray
+.. role:: mc-dark-gray
+.. role:: mc-blue
+.. role:: mc-green
+.. role:: mc-aqua
+.. role:: mc-red
+.. role:: mc-light-purple
+.. role:: mc-yellow
+.. role:: mc-white
+.. role:: mc-minecoin-gold
+.. role:: mc-material-quartz
+.. role:: mc-material-iron
+.. role:: mc-material-netherite
+.. role:: mc-material-redstone
+.. role:: mc-material-copper
+.. role:: mc-material-gold
+.. role:: mc-material-emerald
+.. role:: mc-material-diamond
+.. role:: mc-material-lapis
+.. role:: mc-material-amethyst
+
 This module contains a variety of unicode characters and colors
 to use inside Minecraft. They can be used everywhere where text is
 used: chat, signs, titles etc. The appearance may be changed
