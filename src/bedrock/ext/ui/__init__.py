@@ -65,64 +65,64 @@ class Style:
 
 
 black = Style("0")
-"""Black colored text."""
+"""Black (:mc-black:`#000000`) colored text."""
 
 dark_blue = Style("1")
-"""Dark blue colored text."""
+"""Dark blue (:mc-dark-blue:`#0000AA`) colored text."""
 
 dark_green = Style("2")
-"""Dark green colored text."""
+"""Dark green (:mc-dark-green:`#00AA00`) colored text."""
 
 dark_aqua = Style("3")
-"""Dark aqua colored text."""
+"""Dark aqua (:mc-dark-aqua:`#00AAAA`) colored text."""
 
 dark_red = Style("4")
-"""Dark red colored text."""
+"""Dark red (:mc-dark-red:`#AA0000`) colored text."""
 
 dark_purple = Style("5")
-"""Dark purple colored text."""
+"""Dark purple (:mc-dark-purple:`#AA00AA`) colored text."""
 
 gold = Style("6")
-"""Gold colored text."""
+"""Gold (:mc-gold:`#FFAA00`) colored text."""
 
 gray = Style("7")
-"""Gray colored text."""
+"""Gray (:mc-gray:`#AAAAAA`) colored text."""
 
 dark_gray = Style("8")
-"""Dark gray colored text."""
+"""Dark gray (:mc-dark-gray:`#555555`) colored text."""
 
 blue = Style("9")
-"""Blue colored text."""
+"""Blue (:mc-blue:`#5555FF`) colored text."""
 
 green = Style("a")
-"""Green colored text."""
+"""Green (:mc-green:`#55FF55`) colored text."""
 
 aqua = Style("b")
-"""Aqua colored text."""
+"""Aqua (:mc-aqua:`#55FFFF`) colored text."""
 
 red = Style("c")
-"""Red colored text."""
+"""Red (:mc-red:`#FF5555`) colored text."""
 
 light_purple = Style("d")
-"""Light purple colored text."""
+"""Light purple (:mc-light-purple:`#FF55FF`) colored text."""
 
 yellow = Style("e")
-"""Yellow colored text."""
+"""Yellow (:mc-yellow:`#FFFF55`) colored text."""
 
 white = Style("f")
-"""White colored text."""
+"""White (:mc-white:`#FFFFFF`) colored text."""
 
 minecoin_gold = Style("g")
-"""Minecoin gold colored text."""
+"""Minecoin gold (:mc-minecoin-gold:`#DDD605`) colored text."""
 
 material_quartz = Style("h")
-"""Material quartz colored text."""
+"""Material quartz (:mc-material-quartz:`#E3D4D1`) colored text."""
 
 meterial_iron = Style("i")
-"""Material iron colored text."""
+"""Material iron (:mc-material-iron:`#CECACA`) colored text."""
 
 material_netherite = Style("j")
-"""Material netherite colored text."""
+"""Material netherite (:mc-material-netherite:`#443A3B`) colored text."""
 
 obfuscated = Style("k")
 """Obfuscated text."""
@@ -131,31 +131,31 @@ bold = Style("l")
 """Bold text."""
 
 material_redstone = Style("m")
-"""Material redstone colored text."""
+"""Material redstone (:mc-material-redstone:`#971607`) colored text."""
 
 material_copper = Style("n")
-"""Material copper colored text."""
+"""Material copper (:mc-material-copper:`#B4684D`) colored text."""
 
 italic = Style("o")
 """Italic text."""
 
 material_gold = Style("p")
-"""Material gold colored text."""
+"""Material gold (:mc-material-gold:`#DEB12D`) colored text."""
 
 material_emerald = Style("q")
-"""Material emerald colored text."""
+"""Material emerald (:mc-material-emerald:`#47A036`) colored text."""
 
 reset = Style("r")
 """Reset all styles."""
 
 material_diamond = Style("s")
-"""Material diamond colored text."""
+"""Material diamond (:mc-material-diamond:`#2CBAA8`) colored text."""
 
 material_lapis = Style("t")
-"""Material lapis colored text."""
+"""Material lapis (:mc-material-lapis:`#21497B`) colored text."""
 
 material_amethyst = Style("u")
-"""Material amethyst colored text."""
+"""Material amethyst (:mc-material-amethyst:`#9A5CC6`) colored text."""
 
 
 # The `#:` below are required to include the constants in the
