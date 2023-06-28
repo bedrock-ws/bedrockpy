@@ -61,6 +61,44 @@ tox run
 ```
 
 
+## Submitting Pull Requests
+
+### Commits
+
+Consider commiting each small change.
+
+Commit messages should be precise and clear and should have the following form:
+
+- Start with an emoji.
+- Followed by one space.
+- First character of first word is in uppercase.
+- Present tense.
+
+Example:
+
+```bash
+git commit -m "ℹ️ Add email to authors"
+```
+
+Here is some inspiration for the emojis:
+
+Emoji | Meaning
+------|--------
+🔨    | Fix
+🗑️    | Removal
+➕    | Addition
+🔠    | Changes on text
+📖    | Changes on documentation
+✨    | Changes on style
+
+
+### Pushing
+
+Provide an exact description of your changes.
+
+{{ wip }}
+
+
 ## Table of Contents
 
 ```{toctree}
