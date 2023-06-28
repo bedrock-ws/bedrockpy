@@ -35,13 +35,12 @@ extensions = [
 #######################
 # autodoc Configuration
 
-autodoc_default_options = dict.fromkeys('''
-    members
-    inherited-members
-    undoc-members
-    '''.split(),
-    True
-)
+autodoc_default_options = {
+    'members': True,
+    'inherited-members': True,
+    'undoc-members': True,
+    'special-members': '__call__',
+}
 autodoc_typehints = 'both'
 autoclass_content = 'both'
 
