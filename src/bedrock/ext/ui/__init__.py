@@ -84,7 +84,8 @@ class Style:
         
         Returns
         -------
-        The text prefixed by the formatting code and suffixed with the reset code.
+        str
+            The text prefixed by the formatting code and suffixed with the reset code.
         """
         return f"§{self.code}{text}§r"
 
