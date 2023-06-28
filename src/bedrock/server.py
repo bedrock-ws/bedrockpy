@@ -59,7 +59,8 @@ class Server:
 
         Returns
         -------
-        The function turned into a :class:`events.ServerEvent`.
+        events.ServerEvent
+            The function turned into a :class:`events.ServerEvent`.
         """
         event = events.ServerEvent(fn.__name__, fn)
         self.add_server_event(event)
@@ -103,7 +104,8 @@ class Server:
 
         Returns
         -------
-        The function turned into a :class:`events.GameEvent`.
+        events.GameEvent
+            The function turned into a :class:`events.GameEvent`.
         """
         event = events.GameEvent(fn.__name__, fn)
         self.add_game_event(event)
@@ -140,8 +142,8 @@ class Server:
         
         Returns
         -------
-        The response of the request wrapped in a
-        :external+python:py:class:`asyncio.Future`.
+        CommandResponse
+            The response of the request wrapped in a :external+python:py:class:`asyncio.Future`.
         """
         self._assert_connected()
         assert self._ws is not None
