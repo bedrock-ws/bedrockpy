@@ -23,4 +23,4 @@ Thanks to these people who helped in the development of *bedrockpy*:
 
 -------------------------------------------------------------------
 
-... and the [open-source projects *bedrockpy* depends on](https://github.com/bedrock-ws/bedrockpy/blob/44a918ceba9f633441e32d4a91f4d40fa232020b/pyproject.toml).
+... and the [open-source projects *bedrockpy* depends on](https://github.com/bedrock-ws/bedrockpy/network/dependencies).
