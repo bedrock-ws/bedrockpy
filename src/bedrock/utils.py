@@ -163,7 +163,35 @@ def boolean(value: str) -> bool:
         * ``'y'``/``'yes'``/``'true'`` \N{RIGHTWARDS DOUBLE ARROW} ``True``
         * ``'n'``/``'no'``/``'false'`` \N{RIGHTWARDS DOUBLE ARROW} ``False``
 
-        *The string is converted into lower case before comparing.*
+        .. note::
+            
+            The string is converted into lower case before comparing. That means
+            that ``'TRUe'`` results in ``True`` as well.
+
+    Examples
+    --------
+    .. code-block:: python
+
+        >>> from bedrock.utils import boolean
+        >>> boolean("y")
+        True
+        >>> boolean("yes")
+        True
+        >>> boolean("true")
+        True
+        >>> boolean("trUE")
+        True
+        >>> boolean("1")
+        Traceback (most recent call last):
+          File "<stdin>", line 1 in <module>
+        ValueError: cannot turn '1' into a boolean
+        >>> boolean("n")
+        False
+        >>> boolean("NO")
+        False
+        >>> boolean("False")
+        False
+        >>> 
 
     Raises
     ------
