@@ -1,3 +1,12 @@
+"""
+This example is used to figure out what happens when an event should
+be triggered while another one is running.
+
+Send a message in the chat which will trigger a lot of messages beeing
+sent by the server. In the meantime, destroy a block and a title should
+appear.
+"""
+
 import logging
 import os
 
