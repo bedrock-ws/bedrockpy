@@ -119,7 +119,7 @@ class LocalCoordinate:
     def from_string(cls, value: str) -> LocalCoordinate:
         """Parses a local coordinate.
 
-        Paramaters
+        Parameters
         ----------
         value
             The coordinate to parse.
