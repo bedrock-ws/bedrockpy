@@ -10,12 +10,12 @@ from attrs import define
 
 def rawtext(text: str | Iterable[
     Mapping[
-        Literal["text"] | Literal["selector"],
+        Literal["text", "selector"],
         str
     ] | Mapping[
         Literal["score"],
         Mapping[
-            Literal["name"] | Literal["objective"],
+            Literal["name", "objective"],
             str
         ]
     ]]) -> str:
