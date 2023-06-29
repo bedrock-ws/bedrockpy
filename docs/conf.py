@@ -31,6 +31,7 @@ extensions = [
     'sphinxcontrib.mermaid',
     'sphinxcontrib.video'
 ]
+nitpicky = True
 
 
 #######################
