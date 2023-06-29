@@ -82,6 +82,25 @@ class WorldCoordinate:
 
     @classmethod
     def from_string(cls, value: str) -> WorldCoordinate:
+        """Parses a world coordinate.
+
+        Parameters
+        ----------
+        value
+            The coordinate to parse.
+
+        Examples
+        --------
+        .. code-block:: python
+
+            from bedrock.utils import WorldCoordinate, WorldCoordinates
+
+            x = WorldCoordinate.from_string("17")
+            y = WorldCoordinate.from_string("~27")
+            z = WorldCoordinate.from_string("~-27.4928")
+
+            goto = WorldCoordinates((x, y, z))
+        """
         n = value.removeprefix("~")
         return cls(numeric(n), is_relative=len(n) != len(value))
 
@@ -98,6 +117,25 @@ class LocalCoordinate:
 
     @classmethod
     def from_string(cls, value: str) -> LocalCoordinate:
+        """Parses a local coordinate.
+
+        Paramaters
+        ----------
+        value
+            The coordinate to parse.
+
+        Examples
+        --------
+        .. code-block:: python
+
+            from bedrock.utils import LocalCoordinate, LocalCoordinates
+
+            x = LocalCoordinate.from_string("^1")
+            y = LocalCoordinate.from_string("^-19.5752")
+            z = LocalCoordinate.from_string("^0")
+
+            goto = LocalCoordinates((x, y, z))
+        """
         n = value.removeprefix("^")
         if len(n) != len(value):
             raise ValueError("local coordinate must start with a caret (^)")
