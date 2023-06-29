@@ -49,7 +49,7 @@ async def block_broken(ctx):
 app.start("localhost", 6464)
 ```
 
-*Bitte lese die Sektion "Introduction", um mit bedeockpy zu starten.*
+*Bitte lesen Sie die Sektion "Introduction", um mit bedeockpy zu starten.*
 
 
 ## Vorraussetzungen
