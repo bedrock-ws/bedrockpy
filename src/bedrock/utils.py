@@ -181,10 +181,33 @@ def numeric(value: str) -> float:
     Converts a string into an integer or if that fails into a floating
     point.
 
+    The major reason to use this instead of :external+python:class:`float`
+    is for usage within game commands such as ``teleport`` where an integer
+    coordinate like ``42`` is parsed as ``42.50`` whereas floating points
+    are interpreted as is so that ``21.0`` means ``21.0``. You may override
+    this behaviour by overriding this function which affects the parsing of
+    :meth:`WorldCoordinate.from_string` and :meth:`LocalCoordinate.from_string`:
+
+    .. code-block:: python
+
+        from bedrock import utils
+        utils.numeric = float
+
     Parameters
     ----------
     value
         The string to converr into a numeric.
+
+    Examples
+    --------
+    .. code-block:: python
+
+        >>> from bedrock.utils import numeric
+        >>> numeric("10")
+        10
+        >>> numeric("10.500")
+        10.5
+        >>> 
 
     Raises
     ------
