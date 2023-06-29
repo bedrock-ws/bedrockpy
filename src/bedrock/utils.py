@@ -10,7 +10,7 @@ from attrs import define
 
 def rawtext(text: str | Iterable[
     Mapping[
-        Literal["text", "selector"],
+        Literal["text", "selector", "translate"],
         str
     ] | Mapping[
         Literal["score"],
