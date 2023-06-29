@@ -1,3 +1,8 @@
+"""
+This example is used to test if the limit of 100 commands is handled properly.
+Read more here: https://bedrockpy.readthedocs.io/en/latest/api.html#bedrock.consts.MAX_COMMAND_PROCESSING
+"""
+
 import logging
 import os
 
