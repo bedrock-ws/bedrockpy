@@ -1,3 +1,6 @@
+# FIXME: `None or x` always returns x. Depending on
+#        what x returns, use `x or None`.
+
 from __future__ import annotations
 
 from abc import ABCMeta
