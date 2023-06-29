@@ -74,7 +74,7 @@ pip install -U bedrockpy
 ```
 
 Wenn Sie nicht Windows nutzen, können sie ebenfalls
-[uvloop](https://github.com/MagicStack/uvloop) nutzen, welcher
+[uvloop](https://github.com/MagicStack/uvloop) nutzen, was
 die Geschwindigkeit des Servers beschleunigt:
 
 ```console
