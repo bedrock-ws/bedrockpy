@@ -1,3 +1,7 @@
+"""
+This example is used to test if command responses are parsed correctly.
+"""
+
 import logging
 import os
 
