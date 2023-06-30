@@ -83,7 +83,7 @@ erDiagram
         requirement platform "Any"
     }
     PLAYER {
-        requirement platform "Mobile | Dektop"
+        requirement platform "Mobile | Desktop"
         requirement status "Operator"
     }
     HOST {
