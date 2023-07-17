@@ -37,7 +37,8 @@ First, [install Poetry](https://python-poetry.org/docs/#installation).
 {{wip}}
 
 ```bash
-git clone https://github.com/bedrock-ws/bedrockpy.git && cd $_
+git clone https://github.com/bedrock-ws/bedrockpy.git
+cd bedrockpy
 ```
 
 ```console
