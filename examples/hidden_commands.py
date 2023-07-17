@@ -36,4 +36,4 @@ async def player_message(ctx: PlayerMessageContext) -> None:
         print(repr(res))
         await ctx.server.run(f"tellraw @a {rawtext(repr(res))}")
 
-app.start(os.getenv("IP") or "localhost", 6464
+app.start(os.getenv("IP") or "localhost", 6464)
