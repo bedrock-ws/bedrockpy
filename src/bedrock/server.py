@@ -371,9 +371,6 @@ class Server:
             for req in self._requests:
                 if req.identifier == identifier:
                     logger.debug(f"got request {identifier!r}")
-                    res = response.parse(data)
-                    if isinstance(res, response.CommandResponseError):
-                        req.response.set_exception(res)
-                    else:
-                        req.response.set_result(res)
+                    res = response.CommandResponse.parse(data)
+                    req.response.set_result(res)
                     self._requests.remove(req)

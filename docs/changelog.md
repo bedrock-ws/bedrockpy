@@ -7,10 +7,21 @@ The format is based on
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
 ## [Unreleased]
+
+### Added
+
+- ➕ Added {class}`bedrock.exceptions.CommandRequestError` which replaces
+  `bedrock.response.CommandResponseError`
+
 
 ### Changed
 
+- 🔨 The response of a command request cannot be an exception anymore. Instead
+     an exception may be raised by calling
+    {meth}`bedrock.response.CommandResponse.raise_for_status`.
+- 🔨 {meth}`bedrock.response.CommandResponse.ok` is now a property.
 - 📖 Improvement of documentation.
 
 
