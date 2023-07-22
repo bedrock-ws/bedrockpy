@@ -26,7 +26,7 @@ app.start("localhost", 7654)
 
 ## "Could not connect to server: ..."
 
-Mke sure you have disabled "Require Encrypted Websockets" when you do not
+Make sure you have disabled "Require Encrypted Websockets" when you do not
 use an encrypted connection (which is usually the case). Sometimes you
 might have to type the `/connect` or `/wsserver` over and over or restart
 the server by stopping the program and running it again.
