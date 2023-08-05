@@ -4,7 +4,7 @@
 
 *bedrockpy* does not serve as an alternative way of the Script API[^1] in
 Minecraft. Using a websocket may gives you more control in the
-backend (e.g. grabbing information of a website on the internt) but
+backend (e.g. grabbing information of a website on the internet) but
 provides less interaction with the Minecraft world and the player(s).
 
 *bedrockpy* is nowhere officially documented and is not maintained
