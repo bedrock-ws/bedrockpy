@@ -38,7 +38,7 @@ def rawtext(text: str | Iterable[
 
         >>> from bedrock.utils import rawtext
         >>> rawtext('Hello World')
-        '{"rawtext": [{"text": "Hello, World"}]}'
+        '{"rawtext": [{"text": "Hello World"}]}'
         >>> rawtext([{'text': 'Hello '}, {'selector': '@p[r=10]'}])
         '{"rawtext": [{"text": "Hello "}, {"selectors": "@p[r=10]}]}'
     
