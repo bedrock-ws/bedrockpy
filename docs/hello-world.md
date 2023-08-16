@@ -57,8 +57,7 @@ also be achieved by raising an exception like `SystemExit`.
 ### Client Side
 
 The player who established the connection may type `/connect x` in the
-chat where `x` may be any text. Alternatively, the connection is also
-closed when the player closes the game.
+chat where `x` may be any text. The connection is closed when the player closes the game as well.
 
-Alternative, the {func}`bedrock.server.close` method can be called when
+Alternatively, the {func}`bedrock.server.close` method can be called when
 for instance a special event is triggered.
