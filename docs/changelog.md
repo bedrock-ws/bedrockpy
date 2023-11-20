@@ -12,32 +12,32 @@ and this project adheres to
 
 ### Added
 
-- ➕ Added {class}`bedrock.exceptions.CommandRequestError` which replaces
+- Added {class}`bedrock.exceptions.CommandRequestError` which replaces
   `bedrock.response.CommandResponseError`
 
 
 ### Changed
 
-- 🔨 The response of a command request cannot be an exception anymore. Instead
+- The response of a command request cannot be an exception anymore. Instead
      an exception may be raised by calling
     {meth}`bedrock.response.CommandResponse.raise_for_status`.
-- 🔨 {meth}`bedrock.response.CommandResponse.ok` is now a property.
-- 📖 Improvement of documentation.
+- {meth}`bedrock.response.CommandResponse.ok` is now a property.
+- Improvement of documentation.
 
 
 ## [1.0.0a0.post1] - 2023-05-20
 
 ### Added
 
-- 💡 Typing is now supported.
+- Typing is now supported.
 
 
 ## [1.0.0a0] - 2023-05-20
 
 ### Added
 
-- ✨ Initial release
-- 🔨 Prerelease
+- Initial release
+- Prerelease
 
 [unreleased]: https://github.com/bedrock-ws/bedrockpy/compare/v1.0.0a0.post1...HEAD
 [1.0.0a0.post1]: https://github.com/bedrock-ws/bedrockpy/compare/v1.0.0a0...v1.0.0a0.post1
