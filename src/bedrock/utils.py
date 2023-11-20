@@ -8,21 +8,17 @@ from typing import Literal, NewType
 from attrs import define
 
 
-def rawtext(text: str | Iterable[
-    Mapping[
-        Literal["text", "selector", "translate"],
-        str
-    ] | Mapping[
-        Literal["score"],
-        Mapping[
-            Literal["name", "objective"],
-            str
-        ]
-    ]]) -> str:
+def rawtext(
+    text: str
+    | Iterable[
+        Mapping[Literal["text", "selector", "translate"], str]
+        | Mapping[Literal["score"], Mapping[Literal["name", "objective"], str]]
+    ]
+) -> str:
     """
     Wraps text inside a rawtext JSON object which can be used for
     ``/tellraw``, ``/titleraw`` etc.
-    
+
     .. seealso:: https://wiki.bedrock.dev/commands/tellraw.html
 
     Parameters
@@ -41,39 +37,37 @@ def rawtext(text: str | Iterable[
         '{"rawtext": [{"text": "Hello World"}]}'
         >>> rawtext([{'text': 'Hello '}, {'selector': '@p[r=10]'}])
         '{"rawtext": [{"text": "Hello "}, {"selectors": "@p[r=10]}]}'
-    
+
     """
     if isinstance(text, str):
-        return json.dumps({
-            "rawtext": [{"text": text}]
-        })
+        return json.dumps({"rawtext": [{"text": text}]})
     else:
-        return json.dumps({
-            "rawtext": text
-        })
+        return json.dumps({"rawtext": text})
 
 
 class TargetSelector(str, Enum):
     """
     A collection of target selectors that can be used within commands.
-    
+
     .. seealso:: https://minecraft.fandom.com/wiki/Target_selectors
     """
 
     NEAREST_PLAYER = "@p"
-    RANDOM_PLAYER  = "@r"
-    ALL_PLAYERS    = "@a"
-    ALL_ENTITIES   = "@e"
-    SELF           = "@s"
-    PLAYER_AGENT   = "@c"
-    ALL_AGENTS     = "@v"
-    INITIATOR      = "@initiator"
+    RANDOM_PLAYER = "@r"
+    ALL_PLAYERS = "@a"
+    ALL_ENTITIES = "@e"
+    SELF = "@s"
+    PLAYER_AGENT = "@c"
+    ALL_AGENTS = "@v"
+    INITIATOR = "@initiator"
+
 
 @define
 class WorldCoordinate:
     """
     A class representing a world coordinate.
     """
+
     coord: float
     is_relative: bool = False
 
@@ -110,6 +104,7 @@ class LocalCoordinate:
     """
     A class representing a local coordinate.
     """
+
     coord: float
 
     def __str__(self) -> str:
@@ -143,18 +138,16 @@ class LocalCoordinate:
 
 
 WorldCoordinates = NewType(
-    "WorldCoordinates",
-    tuple[WorldCoordinate, WorldCoordinate, WorldCoordinate]
+    "WorldCoordinates", tuple[WorldCoordinate, WorldCoordinate, WorldCoordinate]
 )
 LocalCoordinates = NewType(
-    "LocalCoordinates",
-    tuple[LocalCoordinate, LocalCoordinate, LocalCoordinate]
+    "LocalCoordinates", tuple[LocalCoordinate, LocalCoordinate, LocalCoordinate]
 )
 
 
 def boolean(value: str) -> bool:
     """Converts a string into a boolean.
-    
+
     Parameters
     ----------
     value
@@ -164,7 +157,7 @@ def boolean(value: str) -> bool:
         * ``'n'``/``'no'``/``'false'`` \N{RIGHTWARDS DOUBLE ARROW} ``False``
 
         .. note::
-            
+
             The string is converted into lower case before comparing. That means
             that ``'TRUe'`` results in ``True`` as well.
 
@@ -191,7 +184,7 @@ def boolean(value: str) -> bool:
         False
         >>> boolean("False")
         False
-        >>> 
+        >>>
 
     Raises
     ------
@@ -203,6 +196,7 @@ def boolean(value: str) -> bool:
     elif value.lower() in {"n", "no", "false"}:
         return False
     raise ValueError(f"cannot turn {value!r} into a boolean")
+
 
 def numeric(value: str) -> float:
     """
@@ -235,7 +229,7 @@ def numeric(value: str) -> float:
         10
         >>> numeric("10.500")
         10.5
-        >>> 
+        >>>
 
     Raises
     ------

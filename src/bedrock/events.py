@@ -8,6 +8,7 @@ from .context import Context
 ContextType = TypeVar("ContextType", bound=Context)
 EventHandler = Callable[[ContextType], Coroutine]  # TODO: specify coro types
 
+
 @define
 class Event:
     name: str
@@ -16,9 +17,11 @@ class Event:
     async def __call__(self, ctx: Context, /) -> None:
         return await self.handler(ctx)
 
+
 @define
 class GameEvent(Event):
     pass
+
 
 @define
 class ServerEvent(Event):

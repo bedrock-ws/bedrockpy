@@ -61,7 +61,7 @@ from attrs import define
 @define
 class Style:
     """A class used to style text in the game.
-    
+
     Attributes
     ----------
     code
@@ -81,7 +81,7 @@ class Style:
         ----------
         text
             The text to style.
-        
+
         Returns
         -------
         str
@@ -223,7 +223,7 @@ PLAYSTATION_L2_BUTTON = chr(0xE026)  #:
 PLAYSTATION_R2_BUTTON = chr(0xE027)  #:
 PLAYSTATION_SELECT_BUTTON = chr(0xE028)  #:
 PLAYSTATION_START_BUTTON = chr(0xE029)  #:
-PLAYSTATION_LEFT_STICK_BUTTON = chr(0xE02A) #:
+PLAYSTATION_LEFT_STICK_BUTTON = chr(0xE02A)  #:
 PLAYSTATION_RIGHT_STICK_BUTTON = chr(0xE02B)  #:
 PLAYSTATION_D_PAD_UP_BUTTON = chr(0xE02C)  #:
 PLAYSTATION_D_PAD_LEFT_BUTTON = chr(0xE02D)  #:
