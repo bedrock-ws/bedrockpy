@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from abc import ABCMeta
 from collections.abc import Mapping
-from typing import Any, TYPE_CHECKING
+from typing import TYPE_CHECKING, Any
 
 from attrs import define
 
@@ -13,7 +13,8 @@ from .response import CommandResponse
 
 if TYPE_CHECKING:
     from .server import Server
-from .utils import rawtext, WorldCoordinate, WorldCoordinates
+
+from .utils import WorldCoordinate, WorldCoordinates, rawtext
 
 
 @define
@@ -136,7 +137,9 @@ class PlayerMessageContext(GameContext):
         """The type of the message."""
         return self._data["type"]
 
-    async def reply(self, message: str, *, raw: bool = False) -> CommandResponse:
+    async def reply(
+        self, message: str, *, raw: bool = False
+    ) -> CommandResponse:
         if raw:
             command = f"tellraw {self.sender} {rawtext(message)}"
         else:
@@ -199,6 +202,7 @@ class ServerContext(Context, metaclass=ABCMeta):
 
 def get_game_context(name: str) -> type[GameContext]:
     return {
+        # TODO
         # "additional_content_loaded": AdditionalContentLoadedContext,
         # "agent_command": AgentCommandContext,
         # "api_init": ApiInitContext,
