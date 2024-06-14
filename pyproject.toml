@@ -30,7 +30,7 @@ include = ["src/bedrock/py.typed"]
 [tool.poetry.dependencies]
 python = "^3.10"
 websockets = "^11.0.2"
-attrs = "^23.1.0"
+attrs = "^23.2.0"
 convert-case = "^1.1.1"
 
 sphinx = {version = "^6.2.1", optional = true}

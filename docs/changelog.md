@@ -18,9 +18,11 @@ and this project adheres to
 
 ### Changed
 
+- Significant performance improvement by providing `wait=False` to
+  {meth}`bedrock.server.Server.send` and {meth}`bedrock.server.Server.run`
 - The response of a command request cannot be an exception anymore. Instead
-     an exception may be raised by calling
-    {meth}`bedrock.response.CommandResponse.raise_for_status`.
+  an exception may be raised by calling
+  {meth}`bedrock.response.CommandResponse.raise_for_status`.
 - {meth}`bedrock.response.CommandResponse.ok` is now a property.
 - Improvement of documentation.
 

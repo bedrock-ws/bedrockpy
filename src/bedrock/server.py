@@ -2,7 +2,7 @@ import asyncio
 from collections.abc import Mapping
 import json
 import logging
-from typing import Any
+from typing import Any, Literal, overload
 import uuid
 import warnings
 
@@ -10,7 +10,7 @@ from attrs import define, field
 import convert_case  # type: ignore
 
 try:
-    import uvloop
+    import uvloop  # type: ignore
 except ImportError:
     pass
 from websockets import server as wss
@@ -131,11 +131,33 @@ class Server:
         """
         self._game_event_handlers.remove(event)
 
+    @overload
     async def send(
         self,
         header: dict[str, Any],
         body: dict[str, Any],
+        *,
+        wait: Literal[True] = True,
     ) -> CommandResponse:
+        ...
+
+    @overload
+    async def send(
+        self,
+        header: dict[str, Any],
+        body: dict[str, Any],
+        *,
+        wait: Literal[False],
+    ) -> None:
+        ...
+
+    async def send(
+        self,
+        header: dict[str, Any],
+        body: dict[str, Any],
+        *,
+        wait: bool = True,
+    ) -> CommandResponse | None:
         """Sends data to the client.
 
         Parameters
@@ -145,6 +167,9 @@ class Server:
 
         body
             The body data for the request.
+
+        wait
+            Waits for a response when awaiting.
 
         Returns
         -------
@@ -165,15 +190,20 @@ class Server:
             identifier=identifier, data=data, response=self._loop.create_future()
         )
 
-        async with self._command_processing_semaphore:
-            logger.debug("sending data ...")
-            await self._ws.send(json.dumps(data))
-            logger.debug("sent data ...")
+        await self._command_processing_semaphore.acquire()
+        
+        logger.debug("sending data ...")
+        await self._ws.send(json.dumps(data))
+        logger.debug("sent data ...")
+
         self._requests.append(request)
-        logger.debug("waiting for response ...")
-        res = await request.response
-        logger.debug("got response")
-        return res
+        
+        if wait:
+            logger.debug("waiting for response ...")
+            res = await request.response
+            logger.debug("got response")
+            return res
+        return None
 
     async def subscribe(self, event_name: str) -> CommandResponse:
         """Subscribes to a game event.
@@ -209,9 +239,33 @@ class Server:
             body={"eventName": convert_case.pascal_case(event_name)},
         )
 
+    @overload
     async def run(
-        self, command: str, *, version: str | list[str] | None = None
+        self,
+        command: str,
+        *,
+        version: str | list[str] | None = None,
+        wait: Literal[True] = True,
     ) -> CommandResponse:
+        ...
+
+    @overload
+    async def run(
+        self,
+        command: str,
+        *,
+        version: str | list[str] | None = None,
+        wait: Literal[False]
+    ) -> None:
+        ...
+
+    async def run(
+        self,
+        command: str,
+        *,
+        version: str | list[str] | None = None,
+        wait: bool = True,
+    ) -> CommandResponse | None:
         """Executes a Minecraft command.
 
         .. note:: The leading slash (``/``) may be omitted.
@@ -224,6 +278,9 @@ class Server:
         version
             The Minecraft version the command syntax relies on. This can
             usually be ignored.
+
+        wait
+            Waits for a response when awaiting.
         """
         version = version or consts.MINECRAFT_VERSION
         command = command.removeprefix("/")
@@ -237,7 +294,8 @@ class Server:
                 "commandLine": command,
                 "origin": {"type": "player"},
             },
-        )
+            wait=wait,
+        )  # type: ignore
 
     def _dispatch_server_event(self, name: str, ctx: context.ServerContext) -> None:
         assert self._loop is not None
@@ -362,6 +420,7 @@ class Server:
         header = data["header"]
         body = data["body"]
         is_response = header.get("messagePurpose") == "commandResponse"
+        is_error = header.get("messagePurpose") == "error"
         event_name = None or convert_case.snake_case(header.get("eventName", ""))
 
         logger.debug(f"{self._game_event_handlers}")
@@ -379,10 +438,12 @@ class Server:
                 self._loop.create_task(event(ctx))
 
         if is_response:
+            # TODO: also respond on error
+            self._command_processing_semaphore.release()
             identifier = uuid.UUID(header["requestId"])
             for req in self._requests:
                 if req.identifier == identifier:
-                    logger.debug(f"got request {identifier!r}")
+                    logger.debug(f"got response for {identifier!r}")
                     res = response.CommandResponse.parse(data)
                     req.response.set_result(res)
                     self._requests.remove(req)
