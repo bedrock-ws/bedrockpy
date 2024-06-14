@@ -383,25 +383,16 @@ class Server:
         self._dispatch_server_event("connect", context.ConnectContext(self))
 
         for event in self._game_event_handlers:
-            # TODO:
-            # The code below is a workaround of just using the `subscribe`
-            # method because it would be blocking in that case. It seems like
-            # just Minecraft commands are responded. Maybe introduce a `wait`
-            # parameter (`True` by default) that does not wait for a response
-            # when set to `False`?
             identifier = uuid.uuid4()
-            await self._ws.send(
-                json.dumps(
-                    {
-                        "header": {
-                            "messageType": "commandRequest",
-                            "messagePurpose": "subscribe",
-                            "version": 1,
-                            "requestId": str(identifier),
-                        },
-                        "body": {"eventName": convert_case.pascal_case(event.name)},
-                    }
-                )
+            await self.send(                
+                header = {
+                    "messageType": "commandRequest",
+                    "messagePurpose": "subscribe",
+                    "version": 1,
+                    "requestId": str(identifier),
+                },
+                body = {"eventName": convert_case.pascal_case(event.name)},
+                wait=False
             )
 
         try:
@@ -438,7 +429,6 @@ class Server:
                 self._loop.create_task(event(ctx))
 
         if is_response:
-            # TODO: also respond on error
             self._command_processing_semaphore.release()
             identifier = uuid.UUID(header["requestId"])
             for req in self._requests:
