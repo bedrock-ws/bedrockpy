@@ -38,8 +38,7 @@ Useful Links & Reference
 
 - https://wiki.bedrock.dev/concepts/emojis.html
 - https://github.com/Partymann2000/bedrock-edition-symbols
-- https://minecraft.fandom.com/wiki/Formatting_codes#Color_codes
-- https://minecraft.fandom.com/wiki/Formatting_codes#Formatting_codes
+- https://minecraft.wiki/w/Formatting_codes#Color_codes
 
 
 Example

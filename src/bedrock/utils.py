@@ -49,7 +49,7 @@ class TargetSelector(str, Enum):
     """
     A collection of target selectors that can be used within commands.
 
-    .. seealso:: https://minecraft.fandom.com/wiki/Target_selectors
+    .. seealso:: https://minecraft.wiki/w/Target_selectors
     """
 
     NEAREST_PLAYER = "@p"
