@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from abc import ABCMeta
 from collections.abc import Mapping
-from typing import TYPE_CHECKING, Any
+from typing import TYPE_CHECKING, Any, Literal, overload
 
 from attrs import define
 
@@ -137,14 +137,26 @@ class PlayerMessageContext(GameContext):
         """The type of the message."""
         return self._data["type"]
 
+    @overload
     async def reply(
-        self, message: str, *, raw: bool = False
+        self, message: str, *, raw: bool = False, wait: Literal[False]
+    ) -> None:
+        ...
+
+    @overload
+    async def reply(
+        self, message: str, *, raw: bool = False, wait: Literal[True] = True
     ) -> CommandResponse:
+        ...
+
+    async def reply(
+        self, message: str, *, raw: bool = False, wait: bool = True
+    ) -> CommandResponse | None:
         if raw:
             command = f"tellraw {self.sender} {rawtext(message)}"
         else:
             command = f"tell {self.sender} {message}"
-        return await self.server.run(command)
+        return await self.server.run(command, wait=wait)  # type: ignore
 
 
 @define
