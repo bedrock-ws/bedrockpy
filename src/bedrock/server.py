@@ -412,7 +412,12 @@ class Server:
         body = data["body"]
         is_response = header.get("messagePurpose") == "commandResponse"
         is_error = header.get("messagePurpose") == "error"
-        event_name = None or convert_case.snake_case(header.get("eventName", ""))
+        
+        event_name: str | None
+        if (name := header.get("eventName")) is not None:
+            event_name = convert_case.snake_case(name)
+        else:
+            event_name = None
 
         logger.debug(f"{self._game_event_handlers}")
         for event in self._game_event_handlers:

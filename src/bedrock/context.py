@@ -1,6 +1,3 @@
-# FIXME: `None or x` always returns x. Depending on
-#        what x returns, use `x or None`.
-
 from __future__ import annotations
 
 from abc import ABCMeta
@@ -61,7 +58,10 @@ class BlockBrokenContext(GameContext):
 
     @property
     def tool(self) -> str | None:
-        return None or self._data["tool"]["id"]
+        try:
+            return self._data["tool"]["id"]
+        except KeyError:
+            return None
 
 
 @define
@@ -95,7 +95,10 @@ class BlockPlacedContext(GameContext):
 
     @property
     def tool(self) -> str | None:
-        return None or self._data["tool"]["id"]
+        try:
+            return self._data["tool"]["id"]
+        except KeyError:
+            return None
 
 
 @define
@@ -125,7 +128,7 @@ class PlayerMessageContext(GameContext):
 
         .. note:: This may be ``None`` if there was no specific receiver.
         """
-        return None or self._data["receiver"]
+        return self._data.get("receiver")
 
     @property
     def sender(self) -> str:
