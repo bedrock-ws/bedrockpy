@@ -33,6 +33,11 @@ class GameContext(Context, metaclass=ABCMeta):
     _server: Server
     _data: Mapping[str, Any]
 
+    @property
+    def data(self) -> Mapping[str, Any]:
+        """A reference to the raw data of the event received."""
+        return self._data
+
 
 @define
 class BlockBrokenContext(GameContext):
@@ -217,7 +222,7 @@ class ServerContext(Context, metaclass=ABCMeta):
 
 def get_game_context(name: str) -> type[GameContext]:
     return {
-        # TODO
+        # TODO: implementation of the commented events
         # "additional_content_loaded": AdditionalContentLoadedContext,
         # "agent_command": AgentCommandContext,
         # "api_init": ApiInitContext,
