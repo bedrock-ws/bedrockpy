@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bedrockpy"
-version = "1.0.0.a0.post1"
+version = "1.0.0"
 description = "Minecraft: Bedrock Edition Websocket Server"
 authors = ["Jonas da Silva"]
 maintainers = [
