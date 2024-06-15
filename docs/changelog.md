@@ -13,13 +13,14 @@ and this project adheres to
 ### Added
 
 - Added {class}`bedrock.exceptions.CommandRequestError` which replaces
-  `bedrock.response.CommandResponseError`
+  `bedrock.response.CommandResponseError`.
+- Added {class}`bedrock.context.GameContext.data` property.
 
 
 ### Changed
 
 - Significant performance improvement by providing `wait=False` to
-  {meth}`bedrock.server.Server.send` and {meth}`bedrock.server.Server.run`
+  {meth}`bedrock.server.Server.send` and {meth}`bedrock.server.Server.run`.
 - The response of a command request cannot be an exception anymore. Instead
   an exception may be raised by calling
   {meth}`bedrock.response.CommandResponse.raise_for_status`.
