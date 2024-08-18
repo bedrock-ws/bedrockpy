@@ -8,27 +8,28 @@ variant to install and use *bedrockpy* on Android.
 ## Install Termux
 
 Termux is a free and open-source terminal emulator for Android. Download
-it from [F-Droid](https://f-droid.org/en/packages/com.termux/) **from the
-website**.
+it from F-Droid [here](https://f-droid.org/en/packages/com.termux/).
 
-```{warning}
-While Termux is available on the Google Play Store as well, you should
-still consider downloading it from F-Droid due to lack of support.
+
+## Install Requirements
+
+Open the Termux app and enter the commands below.
+
+```console
+pkg in python3
+pkg in pipx
+pipx install poetry
 ```
 
-## Install Python
 
-{{wip}}
+## Create Project
 
-{{needs_research}}
+To begin using *bedrockpy*, enter the commands below
+and make yourself familar with [Poetry](https://python-poetry.org/)
 
-```bash
-mkdir -p python/bpy &&
-cd $_ &&
-pkg in python &&
-pip install bedrockpy[fast] &&
-```
-
-```{todo}
-Provide installer script?
+```shell
+mkdir myproject
+cd myproject
+poetry init
+poetry add bedrockpy
 ```
