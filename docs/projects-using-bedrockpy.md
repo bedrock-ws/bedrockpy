@@ -13,26 +13,11 @@ the community? Feel free to apply. There are two methods of doing so:
    [A more public way is opening an issue with the appropiate template](https://github.com/bedrock-ws/bedrockpy/issues/new?assignees=&labels=documentation&projects=&template=%F0%9F%96%90%EF%B8%8F-my-project-uses-bedrockpy.md&title=%5B%F0%9F%96%90%EF%B8%8F+Ad%5D%3A+).
 ```
 
-## BlockDS {octicon}`check-circle`
+## mapart {octicon}`check-circle`
 
-> A 3DS-like system inside Bedrock with a custom OS
+> Create map arts for Minecraft BE worlds.
 
-{{wip}}
-
-## bepix {octicon}`check-circle`
-
-> Import images into Minecraft as Pixel Arts
-
-{{wip}}
-
-
-## nautilus {octicon}`check-circle`
-
-> A [Shell](https://en.wikipedia.org/wiki/Shell_(computing)) inside
-> Minecraft
-
-{{wip}}
-
+https://github.com/bedrock-ws/mapart
 
 ## bedrockpyrepl {octicon}`check-circle`
 
