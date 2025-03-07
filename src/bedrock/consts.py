@@ -26,7 +26,37 @@ never be executed and an error will be sent by the client.
         end
 """
 
-NAME = "External"
+NAME = {
+  "nl_NL": "Extern",
+  "fr_CA": "Externe",
+  "it_IT": "Esterno",
+  "nb_NO": "Ekstern",
+  "fi_FI": "Ulkoinen",
+  "en_US": "Extern",
+  "es_ES": "Externo",
+  "ru_RU": "Внешний",
+  "zh_CN": "外部",
+  "cs_CZ": "Externí",
+  "da_DK": "Ekstern",
+  "es_MX": "Externo",
+  "th_TW": "外部",
+  "bg_BG": "Външен",
+  "uk_UA": "Зовнішні",
+  "sk_SK": "Externý",
+  "pt_PT": "Exterior",
+  "en_GB": "External",
+  "pl_PL": "Zewnętrzny",
+  "sv_SE": "Extern",
+  "tr_TR": "Harici",
+  "id_ID": "Eksternal",
+  "pt_BR": "Externo",
+  "hu_HU": "Külső",
+  "ko_KR": "외부",
+  "fr_FR": "Externe",
+  "el_GR": "Εξωτερικό",
+  "de_DE": "Extern",
+  "ja_JP": "外部",
+}
 """The name of the server displayed in the game.
 
 This name is displayed left to the message when the ``say`` command is used. Therefore
