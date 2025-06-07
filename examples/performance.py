@@ -24,7 +24,7 @@ async def ready(ctx: ReadyContext) -> None:
 async def player_message(ctx: PlayerMessageContext) -> None:
     if ctx.sender != NAME and ctx.message == "performance":
         now = time.time()
-        n = 150
+        n = 1_000
         for i in range(n):
             await ctx.server.run(f"say iteration {i}", wait=False)
         print(f"took {time.time() - now}s to run {n} commands")
