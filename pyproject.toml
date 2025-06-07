@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bedrockpy"
-version = "1.0.0"
+version = "1.0.1"
 description = "Minecraft: Bedrock Edition Websocket Server"
 authors = ["Jonas da Silva"]
 maintainers = [
@@ -28,7 +28,7 @@ packages = [{include = "bedrock", from = "src"}]
 include = ["src/bedrock/py.typed"]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "~=3.10"
 websockets = "^11.0.2"
 attrs = "^23.2.0"
 convert-case = "^1.1.1"
