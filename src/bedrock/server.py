@@ -7,7 +7,7 @@ import uuid
 import warnings
 
 from attrs import define, field
-import convert_case  # type: ignore
+import convert_case
 
 try:
     import uvloop  # type: ignore
@@ -41,7 +41,7 @@ class Server:
     )
     _requests: list[CommandRequest] = field(init=False, factory=list)
 
-    def server_event(self, fn: events.EventHandler, /) -> events.ServerEvent:
+    def server_event(self, fn: events.EventHandler[context.ServerContext], /) -> events.ServerEvent:
         """Convenient way of adding a server event.
 
         The decorated function name must match the name of the event to listen to.
@@ -86,7 +86,7 @@ class Server:
         """
         self._server_event_handlers.remove(event)
 
-    def game_event(self, fn: events.EventHandler, /) -> events.GameEvent:
+    def game_event(self, fn: events.EventHandler[context.GameContext], /) -> events.GameEvent:
         """Convenient way of adding a game event.
 
         The decorated function name must match the name of the event to listen to.

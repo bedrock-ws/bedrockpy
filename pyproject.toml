@@ -66,6 +66,9 @@ fast = [
     "uvloop",
 ]
 
+[tool.mypy]
+strict = true
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

@@ -43,28 +43,40 @@ class GameContext(Context, metaclass=ABCMeta):
 class BlockBrokenContext(GameContext):
     @property
     def id(self) -> str:
-        return self._data["block"]["id"]
+        value = self._data["block"]["id"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def namespace(self) -> str:
-        return self._data["block"]["namespace"]
+        value = self._data["block"]["namespace"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def count(self) -> int:
-        return self._data["count"]
+        value = self._data["count"]
+        assert isinstance(value, int)
+        return value
 
     @property
     def destruction_method(self) -> int:
-        return self._data["destructionMethod"]
+        value = self._data["destructionMethod"]
+        assert isinstance(value, int)
+        return value
 
     @property
     def player(self) -> str:
-        return self._data["player"]
+        value = self._data["player"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def tool(self) -> str | None:
         try:
-            return self._data["tool"]["id"]
+            value = self._data["tool"]["id"]
+            assert isinstance(value, str)
+            return value
         except KeyError:
             return None
 
@@ -73,19 +85,27 @@ class BlockBrokenContext(GameContext):
 class BlockPlacedContext(GameContext):
     @property
     def id(self) -> str:
-        return self._data["block"]["id"]
+        value = self._data["block"]["id"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def namespace(self) -> str:
-        return self._data["block"]["namespace"]
+        value = self._data["block"]["namespace"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def count(self) -> int:
-        return self._data["count"]
+        value = self._data["count"]
+        assert isinstance(value, int)
+        return value
 
     @property
     def player(self) -> str:
-        return self._data["player"]
+        value = self._data["player"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def player_position(self) -> WorldCoordinates:
@@ -101,7 +121,9 @@ class BlockPlacedContext(GameContext):
     @property
     def tool(self) -> str | None:
         try:
-            return self._data["tool"]["id"]
+            value = self._data["tool"]["id"]
+            assert isinstance(value, str)
+            return value
         except KeyError:
             return None
 
@@ -125,7 +147,9 @@ class PlayerMessageContext(GameContext):
     @property
     def message(self) -> str:
         """The message."""
-        return self._data["message"]
+        value = self._data["message"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def receiver(self) -> str | None:
@@ -138,12 +162,16 @@ class PlayerMessageContext(GameContext):
     @property
     def sender(self) -> str:
         """The sender of the message."""
-        return self._data["sender"]
+        value = self._data["sender"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def type(self) -> str:
         """The type of the message."""
-        return self._data["type"]
+        value = self._data["type"]
+        assert isinstance(value, str)
+        return value
 
     @overload
     async def reply(
@@ -171,7 +199,9 @@ class PlayerMessageContext(GameContext):
 class PlayerTransformContext(GameContext):
     @property
     def player(self) -> str:
-        return self._data["player"]["name"]
+        value = self._data["player"]["name"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def player_position(self) -> WorldCoordinates:
@@ -189,15 +219,21 @@ class PlayerTransformContext(GameContext):
 class PlayerTravelledContext(GameContext):
     @property
     def underwater(self) -> bool:
-        return self._data["isUnderwater"]
+        value = self._data["isUnderwater"]
+        assert isinstance(value, bool)
+        return value
 
     @property
     def meters(self) -> float:
-        return self._data["metersTravelled"]
+        value = self._data["metersTravelled"]
+        assert isinstance(value, float)
+        return value
 
     @property
     def player(self) -> str:
-        return self._data["player"]["name"]
+        value = self._data["player"]["name"]
+        assert isinstance(value, str)
+        return value
 
     @property
     def player_position(self) -> WorldCoordinates:
@@ -212,7 +248,9 @@ class PlayerTravelledContext(GameContext):
 
     @property
     def travel_method(self) -> int:
-        return self._data["travelMethod"]
+        value = self._data["travelMethod"]
+        assert isinstance(value, int)
+        return value
 
 
 @define(init=False)
