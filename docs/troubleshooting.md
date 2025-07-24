@@ -30,3 +30,10 @@ Make sure you have disabled "Require Encrypted Websockets" when you do not
 use an encrypted connection (which is usually the case). Sometimes you
 might have to type the `/connect` or `/wsserver` over and over or restart
 the server by stopping the program and running it again.
+
+If you are on Windows, your problem might resolve when you run this PowerShell
+command with admin privileges:
+
+```powershell
+CheckNetIsolation LoopbackExempt -a -n="Microsoft.MinecraftUWP_8wekyb3d8bbwe"
+```
