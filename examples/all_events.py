@@ -6,7 +6,7 @@ from bedrock.context import GameContext, ReadyContext
 from bedrock.events import GameEvent
 from bedrock.server import Server
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.WARNING)
 
 app = Server()
 
@@ -16,6 +16,7 @@ async def ready(ctx: ReadyContext) -> None:
 
 for name in GAME_EVENTS:
     async def handler(ctx: GameContext) -> None:
+        print(ctx.__class__.__name__)
         print(ctx._data)
     app.add_game_event(GameEvent(name, handler))
 
