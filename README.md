@@ -9,6 +9,18 @@
   </p>
 </p>
 
+> [!WARNING]
+>
+> This project has been archived as there was no development in the past months. Currently, [bedrockws-deno](https://github.com/bedrock-ws/bedrockws-deno)
+> is the actively maintained library which can be used with languages in the JavaScript ecosystem. Using this Python library should be fine for basic use
+> cases but it has the following primary issues:
+> - Misconception of server & client: The server does not properly handle multiple clients (see also: https://github.com/bedrock-ws/bedrockpy/issues/13)
+> - Poorly designed: The API design could probably be improved heavily
+>
+> If you are interested in maintaining this project, feel free to reach out on Discord or via Email. Otherwise this project may get a full or partial
+> rewrite in the far future by myself. If you have any questions on certain aspects of how to use this library, feel free to ask and I'll do by best
+> to answer them still.
+
 <!-- start brief-hook -->
 
 *bedrockpy* lets you create a websocket server that is able to interact
